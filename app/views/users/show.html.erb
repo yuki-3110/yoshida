@@ -1,3 +1,13 @@
 <h4><%= @user.name %>のページ</h4>
 
+<p>
+  <strong>お気に入り一覧</strong>
+  <%# @users.each do |user| %>
+    <tr>
+      <td><%#= user.favorite.blog.title %></td>
+      <td><%#= user.favorite.blog.content %></td>
+    </tr>
+  <%# end %>
+</p>
+
 <%= link_to 'みんなの投稿を見る', blogs_path %>

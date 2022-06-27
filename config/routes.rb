@@ -1,5 +1,17 @@
 Rails.application.routes.draw do
-  resources :blogs
+
+  resources :blogs 
+  resources :favorites, only: [:create, :destroy]
+  #   collection do
+  #     post :confirm
+  #   end
+  # end
+
+  # resources :blogs do
+  #   collection do
+  #     post :confirm
+  #   end
+  # end
   # get 'sessions/new'
   root 'users#new'
   resources :users, only: [:new, :create, :show]
